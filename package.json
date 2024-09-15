@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run",
+    "coverage": "Vitest run --coverage"
   },
   "dependencies": {
     "@effect/platform": "^0.64.1",
@@ -32,6 +34,9 @@
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
+    "@tbdex/http-client": "^2.2.1",
+    "@web5/credentials": "^1.1.1",
+    "@web5/dids": "^1.1.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.33.0",
