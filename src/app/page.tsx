@@ -1,7 +1,8 @@
 import { Container, Main, Section } from "@/components/craft";
+import TransactionHistoryCard from "@/components/TransactionHistory";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, HandCoins, Users } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -16,13 +17,20 @@ export default function Home() {
             <AvatarImage src="/avatars/01.png" alt="Avatar" />
             <AvatarFallback className="text-black">OM</AvatarFallback>
           </Avatar>
-        <Button>Theme</Button>
+          <Button>Theme</Button>
         </Container>
         <Container className="grid gap-4">
-          <ServicesCard externalLink="/services/loan" title="Asset Loans" description="Take short term loans on assets in your wallets" icon={<HandCoins className="size-8" />} />
+          <ServicesCard externalLink="/services/loan" title="Asset Loans" description="Take short term loans on assets in your wallet" icon={<HandCoins className="size-8" />} />
           <ServicesCard externalLink="/services/otc" title="OTC P2P" description="Join the OTC P2P Movement, and start making returns on your assets" icon={<Users className="size-8" />} />
         </Container>
       </Section>
+      <Container className="grid gap-4">
+        <Swap />
+      </Container>
+
+      <Container>
+        <TransactionHistoryCard />
+      </Container>
     </Main>
   );
 }
@@ -63,5 +71,16 @@ const ServicesCard = ({
         </CardContent>
       </Card>
     </Link>
+  )
+}
+
+
+const Swap = () => {
+  return (
+    <Card className="rounded-sm">
+      <CardHeader>
+        <CardTitle></CardTitle>
+      </CardHeader>
+    </Card>
   )
 }
