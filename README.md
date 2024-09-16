@@ -47,6 +47,10 @@ We've adopted a micro-service architecture to ensure modularity, scalability, an
 ```
 
 
+![image.png](/.eraser/NCv6EQxBoMJcPwGbZdf2___3fkoYVJn9TRLtpnQzGfRDQm7ahg1___0ROH20ExyPL59cOIYwOd4.png "image.png")
+
+
+
 [﻿View on canvas](https://app.eraser.io/workspace/NCv6EQxBoMJcPwGbZdf2?elements=eTePT6mr3ZfuUguEmj4Z8Q) 
 
 ## Design Considerations
