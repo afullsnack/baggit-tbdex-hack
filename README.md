@@ -72,10 +72,10 @@ We've adopted a micro-service architecture to ensure modularity, scalability, an
 
 
 ## Key Components
-1. **User interface**: Handles user interactions where user chooses currency pairs to swap/convert, interact with PFI's and process their payments
+1. **User interface**: Handles user interactions where user chooses currency pairs to swap/convert, interact with PFI's, and presenting users with the best option in terms of their filter as well as comparability functionality for users to compare between multiple offers, and process their payments
 2. **Payment processing service**: Finalising payment is outside fo TBDex there was a need for a payment processing service to enable smooth transaction flow after an agreement has been reached with PFI
 3. **Compliance Service**: KYC/AML checks and regulatory reporting.
-4. **TBDex Service**: Create user DID's and issue verifiable credentials.
+4. **TBDex Service**: Create user DID's and issue verifiable credentials. Securely store user VC's. Seamlessly retrieve and provided user VC to requesting PFI
 
 
 ## Data Flow
