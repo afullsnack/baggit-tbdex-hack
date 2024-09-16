@@ -1,0 +1,39 @@
+sequence-diagram
+
+// Sequence Diagram for Currency Quote Request and Transaction
+
+title Currency Quote Request and Transaction
+
+User [icon: user, color: green] > App [icon: mobile, color: blue]: Request currency quote
+activate User
+activate App
+
+App > Financial Institution 1 [icon: bank, color: red]: Request quote
+App > Financial Institution 2 [icon: bank, color: red]: Request quote
+App > Financial Institution 3 [icon: bank, color: red]: Request quote
+
+par [label: Collect quotes] {
+  Financial Institution 1 > App: Provide quote
+  and
+  Financial Institution 2 > App: Provide quote
+  and
+  Financial Institution 3 > App: Provide quote
+}
+
+App > User: Display quotes
+deactivate App
+
+alt [label: User selects best quote, color: yellow] {
+  User > App: Select best quote
+  activate App
+  App > Financial Institution [icon: bank, color: red]: Send selected quote
+  App > User: Confirm transaction
+  deactivate App
+}
+else [label: User does not select, color: gray] {
+  User > App: No selection made
+  deactivate App
+}
+
+deactivate User
+
